@@ -1,19 +1,17 @@
-import MobileMenu from "../common/header/MobileMenu";
-import Header from "./Header";
-import Blogs from "../common/Blogs";
-import Partners from "../common/Partners";
-import Footer from "../common/footer/Footer";
+import CallToAction from "../common/CallToAction";
 import CopyrightFooter from "../common/footer/CopyrightFooter";
-import SimpleFilter from "../common/SimpleFilter";
-import WhyChoose from "./WhyChoose";
+import Footer from "../common/footer/Footer";
+import MobileMenu from "../common/header/MobileMenu";
+import Partners from "../common/Partners";
+import Blogs from "../common/Blogs";
 import FeaturedProperties from "./FeaturedProperties";
 import FindProperties from "./FindProperties";
-import HotProperties from "./HotProperties";
-import Testimonial from "./Testimonial";
-import PopupSignInUp from "../common/PopupSignInUp";
+import Header from "./Header";
 import Hero from "./Hero";
+import WhyChoose from "../common/WhyChoose";
+import PopupSignInUp from "../common/PopupSignInUp";
 
-const index = () => {
+const Index = () => {
   return (
     <>
       {/* <!-- Main Header Nav --> */}
@@ -28,40 +26,22 @@ const index = () => {
       {/* <!-- Home Design --> */}
       <Hero />
 
-      {/* <!-- Why Chose Us --> */}
-      <section id="why-chose" className="whychose_us pb30">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6 offset-lg-3">
-              <div className="main-title text-center">
-                <h2>Why Choose Us</h2>
-                <p>We provide full service at every step.</p>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <WhyChoose />
-          </div>
-        </div>
-      </section>
-
       {/* <!-- Feature Properties --> */}
-      <section id="feature-property" className="feature-property bgc-f7 pb30">
+      <section id="feature-property" className="feature-property bgc-f7">
         <div className="container">
           <div className="row">
             <div className="col-lg-6 offset-lg-3">
-              <div className="main-title text-center">
+              <div className="main-title text-center mb40">
                 <h2>Featured Properties</h2>
                 <p>Handpicked properties by our team.</p>
               </div>
             </div>
+            <div className="col-lg-12">
+              <div className="feature_property_slider gutter-x15">
+                <FeaturedProperties />
+              </div>
+            </div>
           </div>
-          {/* End .row */}
-
-          <div className="row">
-            <FeaturedProperties />
-          </div>
-          {/* End .row */}
         </div>
       </section>
 
@@ -82,40 +62,19 @@ const index = () => {
         </div>
       </section>
 
-      {/* <!-- Our Hot Offier --> */}
-      <section className="our-hot-offer parallax">
-        <div className="container">
-          <div className="row mt40">
-            <div className="col-md-6 col-lg-4">
-              <div className="our_hotoffer">
-                <h2>Hot This Week</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <button className="btn ht_offer">View All</button>
-              </div>
-            </div>
-            {/* End .col */}
-            <HotProperties />
-          </div>
-        </div>
-      </section>
-
-      {/* <!-- Our Testimonials --> */}
-      <section className="our-testimonials">
+      {/* <!-- Why Chose Us --> */}
+      <section id="why-chose" className="whychose_us bgc-f7 pb30">
         <div className="container">
           <div className="row">
             <div className="col-lg-6 offset-lg-3">
-              <div className="main-title text-center mb20">
-                <h2>Testimonials</h2>
-                <p>Here could be a nice sub title</p>
+              <div className="main-title text-center">
+                <h2>Why Choose Us</h2>
+                <p>We provide full service at every step.</p>
               </div>
             </div>
           </div>
           <div className="row">
-            <div className="col-lg-6 offset-lg-3">
-              <div className="testimonial_grid_slider style2 gutter-x15">
-                <Testimonial />
-              </div>
-            </div>
+            <WhyChoose />
           </div>
         </div>
       </section>
@@ -155,30 +114,14 @@ const index = () => {
       </section>
 
       {/* <!-- Start Call to Action --> */}
-      <section className="start-partners home7 pt50 pb50">
+      <section className="start-partners bgc-thm pt50 pb50">
         <div className="container">
-          <div className="row">
-            <div className="col-lg-8">
-              <div className="start_partner tac-smd">
-                <h2>Become a Real Estate Agent</h2>
-                <p>We only work with the best companies around the globe</p>
-              </div>
-            </div>
-            {/* End .col */}
-
-            <div className="col-lg-4">
-              <div className="parner_reg_btn home7 text-right tac-smd">
-                <a className="btn" href="#">
-                  Register Now
-                </a>
-              </div>
-            </div>
-          </div>
+          <CallToAction />
         </div>
       </section>
 
       {/* <!-- Our Footer --> */}
-      <section className="footer_one home5">
+      <section className="footer_one">
         <div className="container">
           <div className="row">
             <Footer />
@@ -187,7 +130,7 @@ const index = () => {
       </section>
 
       {/* <!-- Our Footer Bottom Area --> */}
-      <section className="footer_middle_area home5 pt30 pb30">
+      <section className="footer_middle_area pt40 pb40">
         <div className="container">
           <CopyrightFooter />
         </div>
@@ -196,4 +139,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

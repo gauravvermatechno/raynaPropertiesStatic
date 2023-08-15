@@ -1,24 +1,27 @@
-import SimpleFilter from "../common/SimpleFilter";
+import HeroFilter from "./HeroFilter";
 
 const Hero = () => {
   return (
-    <section className="home-seven">
+    <section className="home-one home1-overlay home1_bgi1">
       <div className="container">
         <div className="row posr">
-          <div className="col-lg-10 offset-lg-1">
-            <div className="home_content home7">
-              <div className="home-text text-center">
-                <h2 className="fz55">Discover your place to live</h2>
-                <p className="fz18 color-white">Get started in few clicks.</p>
-              </div>
-              <div className="home_adv_srch_opt home7">
-                <div className="home1-advnc-search home7">
-                  <SimpleFilter />
-                </div>
-              </div>
-            </div>
+          <div className="col-lg-12">
+            <HeroFilter />
           </div>
         </div>
+      </div>
+      {/* End .container */}
+
+      <div className="mouse_scroll">
+        <a href="#feature-property">
+          <div className="icon">
+            <h4>Scroll Down</h4>
+            <p>to discover more</p>
+          </div>
+          <div className="thumb">
+            <img src="assets/images/resource/mouse.png" alt="mouse.png" />
+          </div>
+        </a>
       </div>
     </section>
   );

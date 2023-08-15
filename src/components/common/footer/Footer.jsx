@@ -9,9 +9,7 @@ const Footer = () => {
         <div className="footer_about_widget">
           <h4>About Site</h4>
           <p>
-            We’re reimagining how you buy, sell and rent. It’s now easier to get
-            into a place you love. So let’s do this, together.
-          </p>
+            We are one of the UAE’s top and most trusted property experts. Contact our team with exceptional local experience and in-depth connections for the most progressive property services.      </p>
         </div>
       </div>
       {/* End .col */}

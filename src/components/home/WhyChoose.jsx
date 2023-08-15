@@ -3,23 +3,20 @@ const WhyChoose = () => {
     {
       id: 1,
       icon: "flaticon-high-five",
-      title: "Trusted By Thousands",
-      text: ` Aliquam dictum elit vitae mauris facilisis at dictum urna
-      dignissim donec vel lectus vel felis.`,
+      title: "Ethical Services",
+      text: `As a part of the award-winning Rayna Group, we provide exceptional property services with the highest ethical standards.`,
     },
     {
       id: 2,
       icon: "flaticon-home-1",
-      title: "Wide Renge Of Properties",
-      text: ` Aliquam dictum elit vitae mauris facilisis at dictum urna
-      dignissim donec vel lectus vel felis.`,
+      title: "Outstanding Options",
+      text: `Our extensive portfolio caters to every budget and lifestyle, from high-rise apartments with far-reaching views to luxury townhouses and large villas.`,
     },
     {
       id: 3,
-      icon: "flaticon-profit",
+      icon: "Trusted Financial Advice",
       title: "Financing Made Easy",
-      text: ` Aliquam dictum elit vitae mauris facilisis at dictum urna
-      dignissim donec vel lectus vel felis.`,
+      text: `Our specialist team strikes the best deal and offers expert guidance in raising finance for your dream property.      `,
     },
   ];
   return (

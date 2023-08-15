@@ -1,17 +1,19 @@
-import CallToAction from "../common/CallToAction";
-import CopyrightFooter from "../common/footer/CopyrightFooter";
-import Footer from "../common/footer/Footer";
 import MobileMenu from "../common/header/MobileMenu";
-import Partners from "../common/Partners";
+import Header from "./Header";
 import Blogs from "../common/Blogs";
+import Partners from "../common/Partners";
+import Footer from "../common/footer/Footer";
+import CopyrightFooter from "../common/footer/CopyrightFooter";
+import SimpleFilter from "../common/SimpleFilter";
+import WhyChoose from "./WhyChoose";
 import FeaturedProperties from "./FeaturedProperties";
 import FindProperties from "./FindProperties";
-import Header from "./Header";
-import Hero from "./Hero";
-import WhyChoose from "../common/WhyChoose";
+import HotProperties from "./HotProperties";
+import Testimonial from "./Testimonial";
 import PopupSignInUp from "../common/PopupSignInUp";
+import Hero from "./Hero";
 
-const Index = () => {
+const index = () => {
   return (
     <>
       {/* <!-- Main Header Nav --> */}
@@ -26,44 +28,8 @@ const Index = () => {
       {/* <!-- Home Design --> */}
       <Hero />
 
-      {/* <!-- Feature Properties --> */}
-      <section id="feature-property" className="feature-property bgc-f7">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6 offset-lg-3">
-              <div className="main-title text-center mb40">
-                <h2>Featured Properties</h2>
-                <p>Handpicked properties by our team.</p>
-              </div>
-            </div>
-            <div className="col-lg-12">
-              <div className="feature_property_slider gutter-x15">
-                <FeaturedProperties />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* <!-- Property Cities --> */}
-      <section id="property-city" className="property-city pb30">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6 offset-lg-3">
-              <div className="main-title text-center">
-                <h2>Find Properties in These Cities</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <FindProperties />
-          </div>
-        </div>
-      </section>
-
       {/* <!-- Why Chose Us --> */}
-      <section id="why-chose" className="whychose_us bgc-f7 pb30">
+      <section id="why-chose" className="whychose_us pb30">
         <div className="container">
           <div className="row">
             <div className="col-lg-6 offset-lg-3">
@@ -75,6 +41,81 @@ const Index = () => {
           </div>
           <div className="row">
             <WhyChoose />
+          </div>
+        </div>
+      </section>
+
+      {/* <!-- Feature Properties --> */}
+      <section id="feature-property" className="feature-property bgc-f7 pb30">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6 offset-lg-3">
+              <div className="main-title text-center">
+                <h2>Signature Properties Listings</h2>
+                <p>Explore our expertly curated property picks.</p>
+              </div>
+            </div>
+          </div>
+          {/* End .row */}
+
+          <div className="row">
+            <FeaturedProperties />
+          </div>
+          {/* End .row */}
+        </div>
+      </section>
+
+      {/* <!-- Property Cities --> */}
+      <section id="property-city" className="property-city pb30">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6 offset-lg-3">
+              <div className="main-title text-center">
+                <h2>Areas Served</h2>
+                <p>Find exceptional properties across the finest cities and neighborhoods we expertly serve.</p>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <FindProperties />
+          </div>
+        </div>
+      </section>
+
+      {/* <!-- Our Hot Offier --> */}
+      <section className="our-hot-offer parallax">
+        <div className="container">
+          <div className="row mt40">
+            <div className="col-md-6 col-lg-4">
+              <div className="our_hotoffer">
+                <h2>Hot This Week</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button className="btn ht_offer">View All</button>
+              </div>
+            </div>
+            {/* End .col */}
+            <HotProperties />
+          </div>
+        </div>
+      </section>
+
+      {/* <!-- Our Testimonials --> */}
+      <section className="our-testimonials">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6 offset-lg-3">
+              <div className="main-title text-center mb20">
+                <h2>Testimonials</h2>
+                <p>Know us better through our clients’ stories and genuine feedback.</p>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-6 offset-lg-3">
+              <div className="testimonial_grid_slider style2 gutter-x15">
+                <Testimonial />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -103,7 +144,7 @@ const Index = () => {
             <div className="col-lg-6 offset-lg-3">
               <div className="main-title text-center">
                 <h2>Our Partners</h2>
-                <p>We only work with the best companies around the globe</p>
+                <p>Let’s connect you with some of the distinguished names in the property industry.</p>
               </div>
             </div>
           </div>
@@ -114,14 +155,30 @@ const Index = () => {
       </section>
 
       {/* <!-- Start Call to Action --> */}
-      <section className="start-partners bgc-thm pt50 pb50">
+      <section className="start-partners home7 pt50 pb50">
         <div className="container">
-          <CallToAction />
+          <div className="row">
+            <div className="col-lg-8">
+              <div className="start_partner tac-smd">
+                <h2>Become a Real Estate Agent</h2>
+                <p>Join our network and unravel your passion and potential as a real estate agent.</p>
+              </div>
+            </div>
+            {/* End .col */}
+
+            <div className="col-lg-4">
+              <div className="parner_reg_btn home7 text-right tac-smd">
+                <a className="btn" href="#">
+                  Register Now
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* <!-- Our Footer --> */}
-      <section className="footer_one">
+      <section className="footer_one home5">
         <div className="container">
           <div className="row">
             <Footer />
@@ -130,7 +187,7 @@ const Index = () => {
       </section>
 
       {/* <!-- Our Footer Bottom Area --> */}
-      <section className="footer_middle_area pt40 pb40">
+      <section className="footer_middle_area home5 pt30 pb30">
         <div className="container">
           <CopyrightFooter />
         </div>
@@ -139,4 +196,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default index;

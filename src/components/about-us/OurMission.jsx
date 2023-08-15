@@ -27,27 +27,31 @@ const OurMission = () => {
       <div className="col-lg-8 col-xl-7">
         <div className="about_content">
           <p className="large">
-            Mauris ac consectetur ante, dapibus gravida tellus. Nullam aliquet
-            eleifend dapibus. Cras sagittis, ex euismod lacinia tempor.
+            At Rayna Properties, we proudly stand as one of the leading and most reliable property experts in the United Arab Emirates (UAE). With a deep-rooted commitment to excellence, we have established ourselves as a trusted name in the realm of real estate, offering unparalleled property services to meet the dynamic needs of our diverse clientele.
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-            quis ligula eu lectus vulputate porttitor sed feugiat nunc. Mauris
-            ac consectetur ante, dapibus gravida tellus. Nullam aliquet eleifend
-            dapibus. Cras sagittis, ex euismod lacinia tempor, lectus orci
-            elementum augue, eget auctor metus ante sit amet velit.
+            Our journey began with a vision - a vision to redefine the way property transactions and services are approached in the UAE. Guided by this vision, our team of dedicated professionals brings forth a wealth of local experience and expertise, combined with an extensive network of connections that span the length and breadth of the UAE's real estate landscape.
           </p>
           <p>
-            Maecenas quis viverra metus, et efficitur ligula. Nam congue augue
-            et ex congue, sed luctus lectus congue. Integer convallis
-            condimentum sem. Duis elementum tortor eget condimentum tempor.
-            Praesent sollicitudin lectus ut pharetra pulvinar. Donec et libero
-            ligula. Vivamus semper at orci at placerat.Placeat Lorem ipsum dolor
-            sit amet, consectetur adipisicing elit. Quod libero amet, laborum
-            qui nulla quae alias tempora.
+            As property experts, we understand that the world of real estate is constantly evolving, presenting both opportunities and challenges for buyers, sellers, investors, and renters alike. That's why we have made it our mission to provide progressive and innovative property solutions that empower our clients to make informed decisions and navigate the ever-changing market with confidence.
+          </p>
+          <p>
+            What sets us apart is our unwavering commitment to integrity, transparency, and client satisfaction. We believe in fostering lasting relationships built on trust, and we take pride in the fact that many of our clients return to us time and again, while also referring their friends, family, and colleagues.
+          </p>
+          <p>
+            Our range of services is as diverse as the UAE itself. Whether you're a first-time homebuyer looking for your dream property, an investor seeking lucrative opportunities, or a landlord in search of reliable property management, our dedicated team is here to guide you every step of the way. From property valuations and market insights to negotiations and legal processes, we've got you covered.
+          </p>
+          <p>
+            At Rayna Properties, we don't just assist in property transactions; we create personalized experiences that cater to your unique needs and aspirations. We are more than a company – we are your partners in achieving real estate success.
+          </p>
+          <p>
+            Thank you for considering us as your trusted property experts. We invite you to connect with our team and experience the difference that exceptional local experience, unwavering dedication, and profound industry connections can make in your property journey.
+          </p>
+          <p>
+            Here's to a future of prosperous real estate ventures together.
           </p>
 
-          <ul className="ab_counting">
+          {/* <ul className="ab_counting">
             {missionContent.map((item) => (
               <li className="list-inline-item" key={item.id}>
                 <div className="about_counting">
@@ -61,7 +65,7 @@ const OurMission = () => {
                 </div>
               </li>
             ))}
-          </ul>
+          </ul> */}
           {/* End .ab_counting */}
         </div>
       </div>
