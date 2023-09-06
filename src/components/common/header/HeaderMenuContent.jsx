@@ -259,14 +259,14 @@ const HeaderMenuContent = ({ float = "" }) => {
         <ul className="sub-menu ">
           {home.map((item) => (
             <li key={item.id}>
-              <Link href={item.routerPath}>
-                <a
-                  className={
-                    route.pathname === item.routerPath ? "ui-active" : undefined
-                  }
-                >
-                  {item.name}
-                </a>
+              <Link
+                href={item.routerPath}
+                className={
+                  route.pathname === item.routerPath ? "ui-active" : undefined
+                }>
+
+                {item.name}
+
               </Link>
             </li>
           ))}
@@ -308,16 +308,16 @@ const HeaderMenuContent = ({ float = "" }) => {
               <ul className="sub-menu ">
                 {item.items.map((val, i) => (
                   <li key={i}>
-                    <Link href={val.routerPath}>
-                      <a
-                        className={
-                          route.pathname === val.routerPath
-                            ? "ui-active"
-                            : undefined
-                        }
-                      >
-                        {val.name}
-                      </a>
+                    <Link
+                      href={val.routerPath}
+                      className={
+                        route.pathname === val.routerPath
+                          ? "ui-active"
+                          : undefined
+                      }>
+
+                      {val.name}
+
                     </Link>
                   </li>
                 ))}
@@ -367,17 +367,17 @@ const HeaderMenuContent = ({ float = "" }) => {
               <ul className="sub-menu ">
                 {item.items.map((val, i) => (
                   <li key={i}>
-                    <Link href={val.routerPath}>
-                      <a
-                        className={
-                          route.pathname === val.routerPath ||
-                            val.routerPath + "/[id]" === route.pathname
-                            ? "ui-active"
-                            : undefined
-                        }
-                      >
-                        {val.name}
-                      </a>
+                    <Link
+                      href={val.routerPath}
+                      className={
+                        route.pathname === val.routerPath ||
+                          val.routerPath + "/[id]" === route.pathname
+                          ? "ui-active"
+                          : undefined
+                      }>
+
+                      {val.name}
+
                     </Link>
                   </li>
                 ))}
@@ -403,14 +403,14 @@ const HeaderMenuContent = ({ float = "" }) => {
         <ul className="sub-menu ">
           {pages.map((item) => (
             <li key={item.id}>
-              <Link href={item.routerPath}>
-                <a
-                  className={
-                    route.pathname === item.routerPath ? "ui-active" : undefined
-                  }
-                >
-                  {item.name}
-                </a>
+              <Link
+                href={item.routerPath}
+                className={
+                  route.pathname === item.routerPath ? "ui-active" : undefined
+                }>
+
+                {item.name}
+
               </Link>
             </li>
           ))}
@@ -437,17 +437,17 @@ const HeaderMenuContent = ({ float = "" }) => {
         <ul className="sub-menu ">
           {blog.map((item) => (
             <li key={item.id}>
-              <Link href={item.routerPath}>
-                <a
-                  className={
-                    route.pathname === item.routerPath ||
-                      item.routerPath + "/[id]" === route.pathname
-                      ? "ui-active"
-                      : undefined
-                  }
-                >
-                  {item.name}
-                </a>
+              <Link
+                href={item.routerPath}
+                className={
+                  route.pathname === item.routerPath ||
+                    item.routerPath + "/[id]" === route.pathname
+                    ? "ui-active"
+                    : undefined
+                }>
+
+                {item.name}
+
               </Link>
             </li>
           ))}
@@ -456,12 +456,12 @@ const HeaderMenuContent = ({ float = "" }) => {
       {/* End .dropitem */}
 
       <li className="last">
-        <Link href="/contact">
-          <a
-            className={route.pathname === "/contact" ? "ui-active" : undefined}
-          >
+        <Link
+          href="/contact"
+          className={route.pathname === "/contact" ? "ui-active" : undefined}>
+          
             Contact
-          </a>
+          
         </Link>
       </li>
       {/* End .dropitem */}
@@ -480,10 +480,10 @@ const HeaderMenuContent = ({ float = "" }) => {
 
       <li className={`list-inline-item add_listing ${float}`}>
         <Link href="/create-listing">
-          <a>
-            <span className="flaticon-plus"></span>
-            <span className="dn-lg"> Create Listing</span>
-          </a>
+
+          <span className="flaticon-plus"></span>
+          <span className="dn-lg"> Create Listing</span>
+
         </Link>
       </li>
       {/* End .dropitem */}

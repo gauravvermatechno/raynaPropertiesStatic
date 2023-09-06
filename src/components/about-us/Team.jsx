@@ -34,48 +34,46 @@ const Team = () => {
     ],
   };
 
-  return (
-    <>
-      <Slider {...settings} arrows={true}>
-        {agentsTeam.slice(0, 6).map((item) => (
-          <div className="item" key={item.id}>
-            <div className="team_member">
-              <div className="thumb">
-                <img className="img-fluid w100" src={item.img} alt="5.jpg" />
-                <div className="overylay">
-                  <ul className="social_icon">
-                    {item.socialList.map((social, i) => (
-                      <li className="list-inline-item" key={i}>
-                        <a
-                          href={social.liveLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <i className={`fa ${social.icon}`}></i>
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+  return <>
+    <Slider {...settings} arrows={true}>
+      {agentsTeam.slice(0, 6).map((item) => (
+        <div className="item" key={item.id}>
+          <div className="team_member">
+            <div className="thumb">
+              <img className="img-fluid w100" src={item.img} alt="5.jpg" />
+              <div className="overylay">
+                <ul className="social_icon">
+                  {item.socialList.map((social, i) => (
+                    <li className="list-inline-item" key={i}>
+                      <a
+                        href={social.liveLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className={`fa ${social.icon}`}></i>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              {/* End .thumb */}
-
-              <div className="details">
-                <h4>
-                  {" "}
-                  <Link href={`/agent-details/${item.id}`}>
-                    <a>{item.name}</a>
-                  </Link>
-                </h4>
-                <p>{item.type}</p>
-              </div>
-              {/* End .details */}
             </div>
+            {/* End .thumb */}
+
+            <div className="details">
+              <h4>
+                {" "}
+                <Link href={`/agent-details/${item.id}`}>
+                  {item.name}
+                </Link>
+              </h4>
+              <p>{item.type}</p>
+            </div>
+            {/* End .details */}
           </div>
-        ))}
-      </Slider>
-    </>
-  );
+        </div>
+      ))}
+    </Slider>
+  </>;
 };
 
 export default Team;

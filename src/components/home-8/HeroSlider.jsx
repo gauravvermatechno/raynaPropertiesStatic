@@ -106,8 +106,8 @@ const HeroSlider = () => {
                   <div className="col-md-7 col-lg-8">
                     <div className="main_title">{singleItem.title}</div>
                     <p className="parag">{singleItem.subTitle}</p>
-                    <Link href="/listing-grid-v4">
-                      <a className="btn-booking mt-4">Book Now</a>
+                    <Link href="/listing-grid-v4" className="btn-booking mt-4">
+                      Book Now
                     </Link>
                   </div>
 
@@ -127,7 +127,7 @@ const HeroSlider = () => {
                               <p className="text-thm">{item.type}</p>
                               <h4>
                                 <Link href={`/listing-details-v2/${item.id}`}>
-                                  <a>{item.title}</a>
+                                  {item.title}
                                 </Link>
                               </h4>
                               <p>
@@ -158,28 +158,27 @@ const HeroSlider = () => {
                                 </li>
                               </ul>
 
-                              <Link href={`/listing-details-v1/${item.id}`}>
-                                <a className="fp_price">
-                                  ${item.price}
-                                  <small>/mo</small>
-                                </a>
+                              <Link href={`/listing-details-v1/${item.id}`} className="fp_price">
+                                ${item.price}
+                                <small>/mo</small>
+
                               </Link>
                             </div>
                             <div className="fp_footer">
                               <ul className="fp_meta float-start mb0">
                                 <li className="list-inline-item">
                                   <Link href="/agent-v2">
-                                    <a>
-                                      <img
-                                        src={item.posterAvatar}
-                                        alt="pposter1.png"
-                                      />
-                                    </a>
+
+                                    <img
+                                      src={item.posterAvatar}
+                                      alt="pposter1.png"
+                                    />
+
                                   </Link>
                                 </li>
                                 <li className="list-inline-item">
                                   <Link href="/agent-v2">
-                                    <a>{item.posterName}</a>
+                                    {item.posterName}
                                   </Link>
                                 </li>
                               </ul>

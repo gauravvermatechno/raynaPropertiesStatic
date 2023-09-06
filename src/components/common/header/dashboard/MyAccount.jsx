@@ -11,39 +11,38 @@ const MyAccount = () => {
     { id: 5, name: " Log out", ruterPath: "/login" },
   ];
   const route = useRouter();
-  return (
-    <>
-      <div className="user_set_header">
-        <img
-          className="float-start"
-          src="/assets/images/team/e1.png"
-          alt="e1.png"
-        />
-        <p>
-          Ali Tufan <br />
-          <span className="address">alitufan@gmail.com</span>
-        </p>
-      </div>
-      {/* End user_set_header */}
+  return <>
+    <div className="user_set_header">
+      <img
+        className="float-start"
+        src="/assets/images/team/e1.png"
+        alt="e1.png"
+      />
+      <p>
+        Ali Tufan <br />
+        <span className="address">alitufan@gmail.com</span>
+      </p>
+    </div>
+    {/* End user_set_header */}
 
-      <div className="user_setting_content">
-        {profileMenuItems.map((item) => (
-          <Link href={item.ruterPath} key={item.id}>
-            <a
-              className="dropdown-item"
-              style={
-                isSinglePageActive(`${item.ruterPath}`, route.pathname)
-                  ? { color: "#ff5a5f" }
-                  : undefined
-              }
-            >
-              {item.name}
-            </a>
-          </Link>
-        ))}
-      </div>
-    </>
-  );
+    <div className="user_setting_content">
+      {profileMenuItems.map((item) => (
+        (<Link
+          href={item.ruterPath}
+          key={item.id}
+          className="dropdown-item"
+          style={
+            isSinglePageActive(`${item.ruterPath}`, route.pathname)
+              ? { color: "#ff5a5f" }
+              : undefined
+          }>
+
+          {item.name}
+
+        </Link>)
+      ))}
+    </div>
+  </>;
 };
 
 export default MyAccount;

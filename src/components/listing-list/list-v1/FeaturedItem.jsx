@@ -158,11 +158,10 @@ const FeaturedItem = () => {
                 </li>
               </ul>
 
-              <Link href={`/listing-details-v1/${item.id}`}>
-                <a className="fp_price">
-                  ${item.price}
-                  <small>/mo</small>
-                </a>
+              <Link href={`/listing-details-v1/${item.id}`} className="fp_price">
+                ${item.price}
+                <small>/mo</small>
+
               </Link>
             </div>
           </div>
@@ -171,7 +170,7 @@ const FeaturedItem = () => {
               <p className="text-thm">{item.type}</p>
               <h4>
                 <Link href={`/listing-details-v2/${item.id}`}>
-                  <a>{item.title}</a>
+                  {item.title}
                 </Link>
               </h4>
               <p>
@@ -195,14 +194,14 @@ const FeaturedItem = () => {
               <ul className="fp_meta float-start mb0">
                 <li className="list-inline-item">
                   <Link href="/agent-v1">
-                    <a>
-                      <img src={item.posterAvatar} alt="pposter1.png" />
-                    </a>
+
+                    <img src={item.posterAvatar} alt="pposter1.png" />
+
                   </Link>
                 </li>
                 <li className="list-inline-item">
                   <Link href="/agent-v1">
-                    <a>{item.posterName}</a>
+                    {item.posterName}
                   </Link>
                 </li>
               </ul>

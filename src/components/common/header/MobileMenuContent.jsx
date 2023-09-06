@@ -305,15 +305,15 @@ const MobileMenuContent = () => {
     <ProSidebar>
       <SidebarHeader>
         <div className="sidebar-header">
-          <Link href="/">
-            <a className="sidebar-header-inner">
-              <img
-                className="nav_logo_img img-fluid mt20"
-                src="/assets/images/header-logo2.png"
-                alt="header-logo.png"
-              />
-              <span className="brand-text">FindHouse</span>
-            </a>
+          <Link href="/" className="sidebar-header-inner">
+
+            <img
+              className="nav_logo_img img-fluid mt20"
+              src="/assets/images/header-logo2.png"
+              alt="header-logo.png"
+            />
+            <span className="brand-text">FindHouse</span>
+
           </Link>
           {/* End .logo */}
 
@@ -342,16 +342,16 @@ const MobileMenuContent = () => {
           >
             {home.map((val, i) => (
               <MenuItem key={i} active={true}>
-                <Link href={val.routerPath}>
-                  <a
-                    className={
-                      val.routerPath === route.pathname
-                        ? "ui-active"
-                        : undefined
-                    }
-                  >
-                    {val.name}
-                  </a>
+                <Link
+                  href={val.routerPath}
+                  className={
+                    val.routerPath === route.pathname
+                      ? "ui-active"
+                      : undefined
+                  }>
+
+                  {val.name}
+
                 </Link>
               </MenuItem>
             ))}
@@ -382,16 +382,16 @@ const MobileMenuContent = () => {
               >
                 {item.items.map((val, i) => (
                   <MenuItem key={i}>
-                    <Link href={val.routerPath}>
-                      <a
-                        className={
-                          route.pathname === val.routerPath
-                            ? "ui-active"
-                            : undefined
-                        }
-                      >
-                        {val.name}
-                      </a>
+                    <Link
+                      href={val.routerPath}
+                      className={
+                        route.pathname === val.routerPath
+                          ? "ui-active"
+                          : undefined
+                      }>
+
+                      {val.name}
+
                     </Link>
                   </MenuItem>
                 ))}
@@ -430,17 +430,17 @@ const MobileMenuContent = () => {
               >
                 {item.items.map((val, i) => (
                   <MenuItem key={i}>
-                    <Link href={val.routerPath}>
-                      <a
-                        className={
-                          route.pathname === val.routerPath ||
-                          val.routerPath + "/[id]" === route.pathname
-                            ? "ui-active"
-                            : undefined
-                        }
-                      >
-                        {val.name}
-                      </a>
+                    <Link
+                      href={val.routerPath}
+                      className={
+                        route.pathname === val.routerPath ||
+                        val.routerPath + "/[id]" === route.pathname
+                          ? "ui-active"
+                          : undefined
+                      }>
+
+                      {val.name}
+
                     </Link>
                   </MenuItem>
                 ))}
@@ -463,17 +463,17 @@ const MobileMenuContent = () => {
           >
             {blog.map((val, i) => (
               <MenuItem key={i}>
-                <Link href={val.routerPath}>
-                  <a
-                    className={
-                      route.pathname === val.routerPath ||
-                      val.routerPath + "/[id]" === route.pathname
-                        ? "ui-active"
-                        : undefined
-                    }
-                  >
-                    {val.name}
-                  </a>
+                <Link
+                  href={val.routerPath}
+                  className={
+                    route.pathname === val.routerPath ||
+                    val.routerPath + "/[id]" === route.pathname
+                      ? "ui-active"
+                      : undefined
+                  }>
+
+                  {val.name}
+
                 </Link>
               </MenuItem>
             ))}
@@ -490,16 +490,16 @@ const MobileMenuContent = () => {
           >
             {pages.map((val, i) => (
               <MenuItem key={i}>
-                <Link href={val.routerPath}>
-                  <a
-                    className={
-                      route.pathname === val.routerPath
-                        ? "ui-active"
-                        : undefined
-                    }
-                  >
-                    {val.name}
-                  </a>
+                <Link
+                  href={val.routerPath}
+                  className={
+                    route.pathname === val.routerPath
+                      ? "ui-active"
+                      : undefined
+                  }>
+
+                  {val.name}
+
                 </Link>
               </MenuItem>
             ))}
@@ -507,48 +507,45 @@ const MobileMenuContent = () => {
           {/* End pages Pages */}
 
           <MenuItem>
-            <Link href="/contact">
-              <a
-                className={
-                  route.pathname === "/contact" ? "ui-active" : undefined
-                }
-              >
+            <Link
+              href="/contact"
+              className={
+                route.pathname === "/contact" ? "ui-active" : undefined
+              }>
+              
                 Contact
-              </a>
+              
             </Link>
           </MenuItem>
 
           <MenuItem>
-            <Link href="/login">
-              <a
-                className={
-                  route.pathname === "/login" ? "ui-active" : undefined
-                }
-              >
-                <span className="flaticon-user"></span> Login
-              </a>
+            <Link
+              href="/login"
+              className={
+                route.pathname === "/login" ? "ui-active" : undefined
+              }>
+
+              <span className="flaticon-user"></span>Login
             </Link>
           </MenuItem>
 
           <MenuItem>
-            <Link href="/register">
-              <a
-                className={
-                  route.pathname === "/register" ? "ui-active" : undefined
-                }
-              >
-                <span className="flaticon-edit"></span> Register
-              </a>
+            <Link
+              href="/register"
+              className={
+                route.pathname === "/register" ? "ui-active" : undefined
+              }>
+
+              <span className="flaticon-edit"></span>Register
             </Link>
           </MenuItem>
         </Menu>
       </SidebarContent>
 
       <SidebarFooter>
-        <Link href="/create-listing">
-          <a className="btn btn-block btn-lg btn-thm circle">
-            <span className="flaticon-plus"></span> Create Listing
-          </a>
+        <Link href="/create-listing" className="btn btn-block btn-lg btn-thm circle">
+
+          <span className="flaticon-plus"></span>Create Listing
         </Link>
       </SidebarFooter>
     </ProSidebar>

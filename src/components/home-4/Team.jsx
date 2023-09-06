@@ -63,7 +63,7 @@ const Team = () => {
             <div className="details">
               <h4>
                 <Link href={`/agent-details/${item.id}`}>
-                  <a>{item.name}</a>
+                  {item.name}
                 </Link>
               </h4>
               <p>{item.type}</p>

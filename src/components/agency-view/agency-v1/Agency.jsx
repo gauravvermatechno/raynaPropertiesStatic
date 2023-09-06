@@ -17,14 +17,16 @@ const Agency = () => {
             <div className="col-md-6 col-lg-6" key={item.id}>
                 <div className="feat_property home7 agency">
                     <div className="thumb">
-                        <Link href={`/agency-details/${item.id}`}>
-                            <a className="d-block mx-auto text-center">
-                                <img
-                                    className="img-fluid"
-                                    src={item.img}
-                                    alt="bh1.jpg"
-                                />
-                            </a>
+                        <Link
+                            href={`/agency-details/${item.id}`}
+                            className="d-block mx-auto text-center">
+
+                            <img
+                                className="img-fluid"
+                                src={item.img}
+                                alt="bh1.jpg"
+                            />
+
                         </Link>
                         <div className="thmb_cntnt">
                             <ul className="tag mb0">
@@ -41,7 +43,7 @@ const Agency = () => {
                         <div className="tc_content">
                             <h4>
                                 <Link href={`/agency-details/${item.id}`}>
-                                    <a>{item.name}</a>
+                                    {item.name}
                                 </Link>
                             </h4>
                             <p className="text-thm">{item.type}</p>
@@ -79,11 +81,10 @@ const Agency = () => {
                                 ))}
                             </ul>
                             <div className="fp_pdate float-end text-thm">
-                                <Link href={`/agency-details/${item.id}`}>
-                                    <a className="text-thm">
-                                        View My Listings{" "}
-                                        <i className="fa fa-angle-right"></i>
-                                    </a>
+                                <Link href={`/agency-details/${item.id}`} className="text-thm">
+                                    View My Listings{" "}
+                                    <i className="fa fa-angle-right"></i>
+
                                 </Link>
                             </div>
                         </div>

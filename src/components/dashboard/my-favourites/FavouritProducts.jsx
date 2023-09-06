@@ -22,7 +22,7 @@ const FavouritProducts = () => {
           <h4>
             {" "}
             <Link href={`/listing-details-v1/${item.id}`}>
-              <a>{item.title}</a>
+              {item.title}
             </Link>
           </h4>
           <p>

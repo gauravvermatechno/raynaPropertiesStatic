@@ -71,8 +71,8 @@ const HeroSlider = () => {
                 ))}
               </ul>
               <div className="active">
-                <Link href="/listing-grid-v5">
-                  <a className="banner-btn">Book Now</a>
+                <Link href="/listing-grid-v5" className="banner-btn">
+                  Book Now
                 </Link>
               </div>
             </div>

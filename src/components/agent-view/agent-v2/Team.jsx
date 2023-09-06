@@ -34,13 +34,13 @@ const Team = () => {
                 <div className="feat_property list style2 agent">
                     <div className="thumb">
                         <Link href={`/agent-details/${item.id}`}>
-                            <a>
-                                <img
-                                    className="img-whp"
-                                    src={item.img}
-                                    alt="bh1.jpg"
-                                />
-                            </a>
+
+                            <img
+                                className="img-whp"
+                                src={item.img}
+                                alt="bh1.jpg"
+                            />
+
                         </Link>
                         <div className="thmb_cntnt">
                             <ul className="tag mb0">
@@ -57,7 +57,7 @@ const Team = () => {
                         <div className="tc_content">
                             <h4>
                                 <Link href={`/agent-details/${item.id}`}>
-                                    <a>{item.name}</a>
+                                    {item.name}
                                 </Link>
                             </h4>
                             <p className="text-thm">{item.type}</p>
@@ -95,11 +95,10 @@ const Team = () => {
                                 ))}
                             </ul>
                             <div className="fp_pdate float-end ">
-                                <Link href={`/agent-details/${item.id}`}>
-                                    <a className="text-thm">
-                                        View My Listings{" "}
-                                        <i className="fa fa-angle-right"></i>
-                                    </a>
+                                <Link href={`/agent-details/${item.id}`} className="text-thm">
+                                    View My Listings{" "}
+                                    <i className="fa fa-angle-right"></i>
+
                                 </Link>
                             </div>
                         </div>

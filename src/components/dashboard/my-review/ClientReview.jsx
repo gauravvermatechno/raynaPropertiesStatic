@@ -133,56 +133,54 @@ const ClientReview = () => {
     },
   ];
 
-  return (
-    <>
-      {reviewContent.map((item) => (
-        <div className="media pb30 mt30" key={item.id}>
-          <img className="mr-3" src={item.img} alt="Review image" />
-          <div className="media-body">
-            <h5 className="review_title mt-0">
-              Your review on{" "}
-              <Link href="/agency-details/3">
-                <a>
-                  <span className="text-thm">{item.reviewOn}</span>
-                </a>
-              </Link>
-              <span className="sspd_review float-end">{item.ratings}</span>
-            </h5>
-            <a className="review_date" href="#">
-              December 28, 2020
-            </a>
-            <p className="para">{item.text}</p>
+  return <>
+    {reviewContent.map((item) => (
+      <div className="media pb30 mt30" key={item.id}>
+        <img className="mr-3" src={item.img} alt="Review image" />
+        <div className="media-body">
+          <h5 className="review_title mt-0">
+            Your review on{" "}
+            <Link href="/agency-details/3">
 
-            <ul className="view_edit_delete_list mb0 mt35">
-              <li
-                className="list-inline-item"
-                data-toggle="tooltip"
-                data-placement="top"
-                title="Edit"
-              >
-                <a href="#">
-                  <span className="flaticon-edit"></span>
-                </a>
-              </li>
-              {/* End edit */}
+              <span className="text-thm">{item.reviewOn}</span>
 
-              <li
-                className="list-inline-item"
-                data-toggle="tooltip"
-                data-placement="top"
-                title="Delete"
-              >
-                <a href="#">
-                  <span className="flaticon-garbage"></span>
-                </a>
-              </li>
-              {/* End delete */}
-            </ul>
-          </div>
+            </Link>
+            <span className="sspd_review float-end">{item.ratings}</span>
+          </h5>
+          <a className="review_date" href="#">
+            December 28, 2020
+          </a>
+          <p className="para">{item.text}</p>
+
+          <ul className="view_edit_delete_list mb0 mt35">
+            <li
+              className="list-inline-item"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Edit"
+            >
+              <a href="#">
+                <span className="flaticon-edit"></span>
+              </a>
+            </li>
+            {/* End edit */}
+
+            <li
+              className="list-inline-item"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Delete"
+            >
+              <a href="#">
+                <span className="flaticon-garbage"></span>
+              </a>
+            </li>
+            {/* End delete */}
+          </ul>
         </div>
-      ))}
-    </>
-  );
+      </div>
+    ))}
+  </>;
 };
 
 export default ClientReview;

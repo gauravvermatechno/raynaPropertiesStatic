@@ -69,10 +69,10 @@ const TermsCondions = () => {
               {navigationList.map((list) => (
                 <li key={list.id}>
                   <Link href={list.routeLink}>
-                    <a>
-                      <i className="fa fa-caret-right mr10"></i>
-                      {list.name}
-                    </a>
+
+                    <i className="fa fa-caret-right mr10"></i>
+                    {list.name}
+
                   </Link>
                 </li>
               ))}

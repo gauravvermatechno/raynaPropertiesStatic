@@ -35,74 +35,71 @@ const FeaturedProperties = () => {
     ],
   };
 
-  return (
-    <>
-      <Slider {...settings} arrows={false}>
-        {properties.slice(0, 12).map((item) => (
-          <div className="item" key={item.id}>
-            <div className="feat_property home3">
-              <div className="thumb">
-                <img className="img-whp" src={item.img} alt="fp1.jpg" />
-                <div className="thmb_cntnt">
-                  <ul className="tag mb0">
-                    {item.saleTag.map((val, i) => (
-                      <li className="list-inline-item" key={i}>
-                        <a href="#">{val}</a>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <ul className="icon mb0">
-                    <li className="list-inline-item">
-                      <a href="#">
-                        <span className="flaticon-transfer-1"></span>
-                      </a>
+  return <>
+    <Slider {...settings} arrows={false}>
+      {properties.slice(0, 12).map((item) => (
+        <div className="item" key={item.id}>
+          <div className="feat_property home3">
+            <div className="thumb">
+              <img className="img-whp" src={item.img} alt="fp1.jpg" />
+              <div className="thmb_cntnt">
+                <ul className="tag mb0">
+                  {item.saleTag.map((val, i) => (
+                    <li className="list-inline-item" key={i}>
+                      <a href="#">{val}</a>
                     </li>
-                    <li className="list-inline-item">
-                      <a href="#">
-                        <span className="flaticon-heart"></span>
-                      </a>
-                    </li>
-                  </ul>
+                  ))}
+                </ul>
 
-                  <Link href={`/listing-details-v1/${item.id}`}>
-                    <a className="fp_price">
-                      ${item.price}
-                      <small>/mo</small>
+                <ul className="icon mb0">
+                  <li className="list-inline-item">
+                    <a href="#">
+                      <span className="flaticon-transfer-1"></span>
                     </a>
-                  </Link>
-                </div>
-              </div>
-              <div className="details">
-                <div className="tc_content">
-                  <p className="text-thm">{item.type}</p>
-                  <h4>
-                    <Link href={`/listing-details-v1/${item.id}`}>
-                      <a>{item.title}</a>
-                    </Link>
-                  </h4>
-                  <p>
-                    <span className="flaticon-placeholder"></span>
-                    {item.location}
-                  </p>
+                  </li>
+                  <li className="list-inline-item">
+                    <a href="#">
+                      <span className="flaticon-heart"></span>
+                    </a>
+                  </li>
+                </ul>
 
-                  <ul className="prop_details mb0">
-                    {item.itemDetails.map((val, i) => (
-                      <li className="list-inline-item" key={i}>
-                        <a href="#">
-                          {val.name}: {val.number}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <Link href={`/listing-details-v1/${item.id}`} className="fp_price">
+                  ${item.price}
+                  <small>/mo</small>
+
+                </Link>
+              </div>
+            </div>
+            <div className="details">
+              <div className="tc_content">
+                <p className="text-thm">{item.type}</p>
+                <h4>
+                  <Link href={`/listing-details-v1/${item.id}`}>
+                    {item.title}
+                  </Link>
+                </h4>
+                <p>
+                  <span className="flaticon-placeholder"></span>
+                  {item.location}
+                </p>
+
+                <ul className="prop_details mb0">
+                  {item.itemDetails.map((val, i) => (
+                    <li className="list-inline-item" key={i}>
+                      <a href="#">
+                        {val.name}: {val.number}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
-        ))}
-      </Slider>
-    </>
-  );
+        </div>
+      ))}
+    </Slider>
+  </>;
 };
 
 export default FeaturedProperties;
