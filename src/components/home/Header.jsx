@@ -26,7 +26,7 @@ const Header = () => {
         {/* <!-- Ace Responsive Menu --> */}
 
         <div className="d-flex align-items-center flex-wrap home6-nav">
-          <Link legacyBehavior href="/">
+          <Link href="/">
             <a className="navbar_brand float-start dn-smd">
               <img
                 className="logo1 img-fluid"
