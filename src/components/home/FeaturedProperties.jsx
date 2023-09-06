@@ -1,10 +1,31 @@
 import Link from "next/link";
 import properties from "../../data/properties";
 
-const FeaturedProperties = () => {
+
+async function getProperties() {
+
+  var requestOptions = {
+    method: 'GET',
+    redirect: 'follow'
+  };
+  const res = await fetch("http://localhost:8000/api/properties/all-properties/", requestOptions)
+
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error('Failed to fetch data')
+  }
+
+  return res.json()
+}
+const FeaturedProperties = async () => {
+
+  const properties2 = await getProperties()
+  console.log(properties2)
+
   return (
     <>
-      {properties.slice(21, 27).map((item) => (
+      <div>sdfsf</div>
+      {/* {properties2.map((item) => (
         <div className="col-md-6 col-lg-4" key={item.id}>
           <div className="item">
             <div className="feat_property">
@@ -84,7 +105,7 @@ const FeaturedProperties = () => {
             </div>
           </div>
         </div>
-      ))}
+      ))} */}
     </>
   );
 };

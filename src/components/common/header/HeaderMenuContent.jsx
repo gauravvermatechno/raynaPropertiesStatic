@@ -259,7 +259,7 @@ const HeaderMenuContent = ({ float = "" }) => {
         <ul className="sub-menu ">
           {home.map((item) => (
             <li key={item.id}>
-              <Link href={item.routerPath}>
+              <Link legacyBehavior href={item.routerPath}>
                 <a
                   className={
                     route.pathname === item.routerPath ? "ui-active" : undefined

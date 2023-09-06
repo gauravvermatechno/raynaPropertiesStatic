@@ -19,15 +19,14 @@ const Header = () => {
 
   return (
     <header
-      className={`header-nav menu_style_home_one home7 navbar-scrolltofixed stricky main-menu  ${
-        navbar ? "stricky-fixed " : ""
-      }`}
+      className={`header-nav menu_style_home_one home7 navbar-scrolltofixed stricky main-menu  ${navbar ? "stricky-fixed " : ""
+        }`}
     >
       <div className="container p0">
         {/* <!-- Ace Responsive Menu --> */}
 
         <div className="d-flex align-items-center flex-wrap home6-nav">
-          <Link href="/">
+          <Link legacyBehavior href="/">
             <a className="navbar_brand float-start dn-smd">
               <img
                 className="logo1 img-fluid"
@@ -39,7 +38,7 @@ const Header = () => {
                 src="/assets/images/header-logo2.png"
                 alt="header-logo2.png"
               />
-              <span>FindHouse</span>
+              <span>Rayna Properties</span>
             </a>
           </Link>
           {/* site logo brand */}
